@@ -1,0 +1,81 @@
+KanjiDamage Notes
+=================================
+
+* MAIN PURPOSE: set up spreadsheet for anki import
+* Additional Possibilities: extract img items systematically, extract list of vocab on all pages
+
+TODO
+---------------------------------
+now/release
+- DONE
+eventual
+- DONE - kanji stroke order image generation - https://github.com/cayennes/kanji-colorize
+- returning lists of useful data (all kanji that are images, all words [onyomi/jukugo], all kanji with mutants)
+- synonyms
+- code indices
+- general optimisation (encoding/cleaning functions, kanji str/img processor, processing links and images generally before scraping, etc.)
+- expanded automation to reduce workload at spreadsheet stage
+super eventual
+- grabbing the files from the site on the fly, not reading from a dump
+
+SIDE PROJECTS
+---------------------------------
+helpers
+- list of all img kanji (i.e. original radicals) and mutants -> automated wget DL/rename script generation
+- list of all vocab (kunyomi, jukugo) -> reordered based on known kanji
+- list of all onyomi -> replace with kana recursively
+
+
+
+Section Titles
+---------------------------------
+Mutants			see 0098
+Onyomi
+Mnemonic
+Kunyomi
+Jukugo
+Lookalikes		see 0004
+Used In
+Synonyms
+
+
+
+* generally, KANJI may be plain text or an <img alt="MEANING" /> tag
+
+Structure
+---------------------------------
+Jukugo
+----------------
+tr
+	td - vocabulary
+		<ruby>(<span class='particles'>PARTICLE</span>)<span class='kanji_character'><ruby>WORD<rp>(</rp><rt>FURIGANA</rt><rp>)</rp></ruby></span></ruby>
+	td - information
+		<p>MEANING<span class="usefulness-stars">RATING</span><a class="label label-info">TAG</a><br>COMPOSITION</p>
+		<p>DESCRIPTION</p> (can be several p tags for desc)
+----------------
+Lookalikes
+----------------
+table
+	tr - headers
+	tr - lookalike item (repeated)
+		td - kanji
+			<a class="kanji_character">KANJI</a>
+		td - meaning
+			MEANING
+		td - hint
+			DESCRIPTION
+		td - radical
+			<a>RADICAL</a>
+p - helper mnemonic (can be several)
+----------------
+Used In
+----------------
+ul - class="lacidar"
+	li - kanji item (repeated)
+		<a>KANJI</a>
+----------------
+Synonyms
+----------------
+tr > td
+	<a>MEANING</a><br/>WORD&nbsp;&nbsp;WORD (&nbsp;&nbsp;WORD repeated)
+----------------
