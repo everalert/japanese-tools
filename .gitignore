@@ -1,8 +1,7 @@
-yojijukugo*/pages/
-kanjidamage/data/
+yojijukugo/pages/
 kanjidamage/img/
-kanjidamage/kanjicolorizer/data/
-kanjidamage/kanjicolorizer/tests/
+kanjidamage/data/
+kanjidamage/kanjicolorizer/
 sentenceprocessor/spkeys.py
 *.csv
 *.ods
