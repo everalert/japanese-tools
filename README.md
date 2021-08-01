@@ -14,3 +14,7 @@ Generates TTS audio files and Anki-formatted Furigana from ODS spreadsheets.
 [KanjiDamage](http://www.kanjidamage.com/) (RTK-like study website) scraper and kanji diagram generator.
 * Requires `/kanjicolorizer` folder from [KanjiColorizer](https://github.com/cayennes/kanji-colorize) in main directory.
 * May also need to extract [KanjiVG](https://github.com/KanjiVG/kanjivg/releases) data to `/kanjicolorizer/data/kanjivg`
+
+### `/anki_datetime`
+[Anki](https://apps.ankiweb.net/) addon that lets you insert the current datetime into an editor field from the context menu.
+* Intended for quickly filling an ID-style sort field with something unique.
