@@ -4,7 +4,7 @@ Collection of scripts related to Japanese study. Not all are up-to-date and may 
 
 ### `/sentenceprocessor`
 Generates TTS audio files and Anki-formatted Furigana from ODS spreadsheets.
-* Requires [Azure Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/) Speech API and [Yahoo Japan](https://developer.yahoo.co.jp/webapi/jlp/furigana/v1/furigana.html) API keys.
+* Requires [Azure Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/) Speech API and [Yahoo! Japan](https://developer.yahoo.co.jp/webapi/jlp/furigana/v1/furigana.html) API keys.
 * Place keys in `spkeys.py` (see `sentenceprocessor.py` for variable names)
 
 ### `/yojijukugo`
@@ -18,3 +18,9 @@ Generates TTS audio files and Anki-formatted Furigana from ODS spreadsheets.
 ### `/anki_datetime`
 [Anki](https://apps.ankiweb.net/) addon that lets you insert the current datetime into an editor field from the context menu.
 * Intended for quickly filling an ID-style sort field with something unique.
+
+### `/anki_furigana`
+[Anki](https://apps.ankiweb.net/) addon that generates furigana for a single editor field.
+* Requires [Yahoo! Japan](https://developer.yahoo.co.jp/webapi/jlp/furigana/v1/furigana.html) API key.
+* Accessible from the context menu.
+* Replaces field with the API output; cannot be undone.
